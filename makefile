@@ -1,14 +1,14 @@
 CXX = g++
 CXXFLAGS = -Wall -g
 
-hash-table: main.cpp HashTable.h 
-	$(CXX) $(CXXFLAGS) main.cpp HashTable.h -o hash-table
+string-hash-table: main.cpp StringHashTable.h 
+	$(CXX) $(CXXFLAGS) main.cpp StringHashTable.h -o string-hash-table
 
-HashTable.o: HashTable.h
-	$(CXX) $(CXXFLAGS) -c HashTable.h
+StringHashTable.o: StringHashTable.h
+	$(CXX) $(CXXFLAGS) -c StringHashTable.h
 
 run:
-	./hash-table
+	./string-hash-table
 
 val:
-	valgrind ./hash-table
+	valgrind ./string-hash-table
